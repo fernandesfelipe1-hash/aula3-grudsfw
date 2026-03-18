@@ -11,7 +11,17 @@ class Ecommerce extends Controller
     public function index() {
         // veio do model/banco de dados
         $nome_produto = 'Bota Super Descolada';
+        $breadcrumb = [
+            'Home' => '/home', 
+            'E-commerce' => '/ecommerce', 
+            'Botas' => '/ecommerce/botas',
+            'Lowa' => '/ecommerce/botas/lowa',
+            'Teste' => '/ecommerce/botas/lowa/test'
+        ];
 
-        return view('e-commerce', ['produto' => $nome_produto]);
+        return view('e-commerce', [
+            'produto' => $nome_produto,
+            'breadcrumbs' => $breadcrumb
+        ]);
     }
 }
