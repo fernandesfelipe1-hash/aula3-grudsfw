@@ -16,7 +16,6 @@ class Ecommerce extends Controller
             'E-commerce' => '/ecommerce', 
             'Botas' => '/ecommerce/botas',
             'Lowa' => '/ecommerce/botas/lowa',
-            'Teste' => '/ecommerce/botas/lowa/test'
         ];
 
         return view('e-commerce', [

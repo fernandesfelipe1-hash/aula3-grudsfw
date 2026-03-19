@@ -1,3 +1,9 @@
+
+@props([
+    "titulo" => "",
+    "breadcrumbs" => []
+])
+
 <section class="content-header">
     <div class="container-fluid">
         <div class="row mb-2">
@@ -8,7 +14,11 @@
                 <ol class="breadcrumb float-sm-right">
                     @foreach ($breadcrumbs as $key => $value)
                         <li class="breadcrumb-item">
-                            <a href="{{ $value }}">{{ $key }}</a>
+                            @if($loop->last)
+                                {{ $key }}</a>
+                            @else 
+                                <a href="{{ $value }}">{{ $key }}</a>
+                            @endif
                         </li>
                     @endforeach
                     {{--
